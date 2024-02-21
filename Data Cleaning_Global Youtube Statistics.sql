@@ -243,36 +243,6 @@ SELECT `rank`, youtuber, subscribers, video_views, uploads, category, country, a
 FROM my_project.global_youtube_statistics;
 
 
--- To only include the top 25th percentile
-
-
-SELECT `rank`, youtuber, subscribers, video_views, uploads, category, country, abbreviation,
-    video_views_for_the_last_30_days, subscribers_for_last_30_days, lowest_monthly_earnings, highest_monthly_earnings, lowest_yearly_earnings, highest_yearly_earnings,
-	created_year, created_month, created_date, date_joined
-FROM my_project.global_youtube_statistics
-WHERE `rank` >= 1 AND `rank` <= 248;
-
-
--- To only include the top 50th percentile
-
-
-SELECT `rank`, youtuber, subscribers, video_views, uploads, category, country, abbreviation,
-    video_views_for_the_last_30_days, subscribers_for_last_30_days, lowest_monthly_earnings, highest_monthly_earnings, lowest_yearly_earnings, highest_yearly_earnings,
-	created_year, created_month, created_date, date_joined
-FROM my_project.global_youtube_statistics
-WHERE `rank` >= 1 AND `rank` <= 496;
-
-
--- To only include the top 75th percentile
-
-
-SELECT `rank`, youtuber, subscribers, video_views, uploads, category, country, abbreviation,
-    video_views_for_the_last_30_days, subscribers_for_last_30_days, lowest_monthly_earnings, highest_monthly_earnings, lowest_yearly_earnings, highest_yearly_earnings,
-	created_year, created_month, created_date, date_joined
-FROM my_project.global_youtube_statistics
-WHERE `rank` >= 1 AND `rank` <= 744;
-
-
 -- To exclude channels with no earnings data
 
 
